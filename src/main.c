@@ -276,7 +276,7 @@ static void PrepareTxFrame(uint8_t port) {
 		AppData[3] = (tempr * 10) & 0xFF;
 
 		AppData[4] = 0x04;
-		AppData[5] = 0x03; //Analog Output
+		AppData[5] = 0x02; //Analog Input
 		bat = BoardBatteryMeasureVolage();
 		AppData[6] = ((bat / 10) >> 8) & 0xFF;
 		AppData[7] = (bat / 10) & 0xFF;
